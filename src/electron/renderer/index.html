@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepOcean</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/overlay.css">
+  <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+  <!-- 屏幕边框光影效果 -->
+  <canvas id="border-glow-canvas"></canvas>
+
+  <!-- 顶部浮层面板 -->
+  <div id="overlay-panel" class="overlay-panel hidden">
+    <!-- 中央 Siri 风格动画 -->
+    <div id="center-animation" class="center-animation">
+      <div class="wave-container">
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+      </div>
+    </div>
+
+    <!-- 状态显示区域 -->
+    <div class="state-display">
+      <div class="state-text" id="state-text">正在聆听...</div>
+      <div class="transcription" id="transcription"></div>
+      <div class="loading-spinner hidden" id="loading-spinner">
+        <div class="spinner"></div>
+      </div>
+      
+      <!-- 确认按钮（仅在需要用户确认时显示） -->
+      <div class="confirmation-buttons" id="confirmation-buttons">
+        <button class="confirm-btn primary" id="confirm-yes">确认执行</button>
+        <button class="confirm-btn secondary" id="confirm-no">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/ui/border-glow.js"></script>
+  <script src="scripts/ui/center-animation.js"></script>
+  <script src="scripts/ui/overlay-panel.js"></script>
+  <script src="scripts/animation-engine.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

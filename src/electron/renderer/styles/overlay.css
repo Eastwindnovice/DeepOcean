@@ -1,0 +1,166 @@
+/* 顶部浮层面板 */
+.overlay-panel {
+  position: fixed;
+  top: 0;                          /* 参数1: 距离顶部的距离，0表示贴合顶部边框 */
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 500px;                /* 参数2: 最小宽度，改为500px（更长） */
+  max-width: 900px;                /* 参数3: 最大宽度，改为900px（更长，支持长文本换行） */
+  padding: 24px 40px 32px 40px;   /* 参数4: 内边距 (上 右 下 左)，左右增加到40px */
+  background: rgba(0, 0, 0, 0.25); /* 参数5: 背景颜色透明度 */
+  backdrop-filter: blur(15px);     /* 参数6: 毛玻璃模糊程度 */
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 0 0 20px 20px;    /* 参数7: 圆角 (左上 右上 右下 左下)，上边0表示无圆角，下边20px */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+              0 0 0 1px rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  pointer-events: auto;
+  -webkit-app-region: no-drag;
+  transition: all 0.3s ease;       /* 添加过渡动画，让面板大小变化更平滑 */
+}
+
+/* 中央动画容器 */
+.center-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 80px;
+}
+
+/* 波浪容器 */
+.wave-container {
+  position: relative;
+  width: 200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 波浪效果 */
+.wave {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.wave-1 {
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.8) 0%, rgba(0, 102, 204, 0.4) 70%);
+  filter: blur(8px);
+}
+
+.wave-2 {
+  background: radial-gradient(circle, rgba(0, 102, 204, 0.8) 0%, rgba(0, 212, 255, 0.4) 70%);
+  filter: blur(10px);
+}
+
+.wave-3 {
+  background: radial-gradient(circle, rgba(157, 78, 221, 0.6) 0%, rgba(0, 102, 204, 0.3) 70%);
+  filter: blur(12px);
+}
+
+/* 状态显示区域 */
+.state-display {
+  text-align: center;
+  color: #ffffff;
+}
+
+.state-text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.transcription {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  min-height: 24px;
+  line-height: 1.6;
+  word-wrap: break-word;           /* 参数8: 允许单词内换行 */
+  word-break: break-word;          /* 参数9: 强制换行，避免溢出 */
+  white-space: pre-wrap;           /* 参数10: 保留空格和换行，自动换行 */
+  max-width: 100%;                 /* 参数11: 最大宽度为父容器100% */
+  text-align: left;                /* 参数12: 文本左对齐，更适合长文本 */
+  margin-bottom: 16px;             /* 参数13: 与下方按钮的间距 */
+}
+
+/* 确认按钮容器 */
+.confirmation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;                       /* 参数14: 按钮之间的间距 */
+  margin-top: 16px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.confirmation-buttons.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* 确认按钮样式 */
+.confirm-btn {
+  padding: 10px 24px;              /* 参数15: 按钮内边距 (上下 左右) */
+  font-size: 14px;                 /* 参数16: 按钮字体大小 */
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;              /* 参数17: 按钮圆角 */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-app-region: no-drag;
+}
+
+.confirm-btn.primary {
+  background: rgba(0, 212, 255, 0.9);  /* 参数18: 确认按钮背景色 */
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 212, 255, 0.3);
+}
+
+.confirm-btn.primary:hover {
+  background: rgba(0, 212, 255, 1);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.confirm-btn.secondary {
+  background: rgba(255, 255, 255, 0.15);  /* 参数19: 取消按钮背景色 */
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.confirm-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+/* 加载动画 */
+.loading-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: rgba(0, 212, 255, 0.9);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

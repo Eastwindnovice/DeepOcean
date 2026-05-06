@@ -1,0 +1,23 @@
+{
+  "name": "deepocean",
+  "productName": "DeepOcean",
+  "version": "0.1.0",
+  "description": "DeepOcean - Your intelligent desktop companion that flows like the ocean",
+  "main": "src/electron/main/index.js",
+  "scripts": {
+    "dev": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "deepocean",
+    "ai-assistant",
+    "voice-control",
+    "desktop-ai"
+  ],
+  "author": "DeepOcean Team",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}
