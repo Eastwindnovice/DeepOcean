@@ -35,12 +35,13 @@ function registerHotkeys() {
   // 注册 Ctrl+Alt+I 快捷键
   globalShortcut.register('CommandOrControl+Alt+I', () => {
     if (mainWindow) {
-      if (mainWindow.isVisible()) {
-        mainWindow.webContents.send('toggle-assistant', false);
-      } else {
+      // 始终确保窗口是显示的
+      if (!mainWindow.isVisible()) {
         mainWindow.show();
-        mainWindow.webContents.send('toggle-assistant', true);
       }
+      
+      // 直接发送切换信号给渲染进程，让渲染进程自己决定显示还是隐藏
+      mainWindow.webContents.send('toggle-assistant');
     }
   });
 }
@@ -73,8 +74,9 @@ ipcMain.on('set-ignore-mouse-events', (event, ignore, options) => {
   }
 });
 
-ipcMain.on('hide-window', () => {
-  if (mainWindow) {
-    mainWindow.hide();
-  }
-});
+// 移除 hide-window 处理，不再隐藏窗口
+// ipcMain.on('hide-window', () => {
+//   if (mainWindow) {
+//     mainWindow.hide();
+//   }
+// });

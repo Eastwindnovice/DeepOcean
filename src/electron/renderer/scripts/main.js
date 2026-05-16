@@ -1,11 +1,12 @@
 // 主入口脚本
 
 // 监听来自主进程的切换事件
-window.electronAPI.onToggleAssistant((isShow) => {
-  if (isShow) {
-    window.overlayPanel.show();
-  } else {
+window.electronAPI.onToggleAssistant(() => {
+  // 切换面板的显示/隐藏状态
+  if (window.overlayPanel.isVisible) {
     window.overlayPanel.hide();
+  } else {
+    window.overlayPanel.show();
   }
 });
 

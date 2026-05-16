@@ -50,8 +50,7 @@ class OverlayPanel {
   }
   
   show() {
-    if (this.isVisible) return;
-    
+    // 强制重置状态，确保可以重复显示
     this.isVisible = true;
     this.panel.classList.remove('hidden', 'hide');
     this.panel.classList.add('show');
@@ -89,8 +88,9 @@ class OverlayPanel {
       // 恢复鼠标穿透
       window.electronAPI.setIgnoreMouseEvents(true, { forward: true });
       
-      // 通知主进程隐藏窗口
-      window.electronAPI.hideWindow();
+      // 重置状态，确保下次可以正常显示
+      this.currentState = this.states.LISTENING;
+      this.transcription.textContent = '';
     }, 300);
   }
   
