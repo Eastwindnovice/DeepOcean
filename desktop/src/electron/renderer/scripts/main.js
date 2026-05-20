@@ -10,6 +10,11 @@ window.electronAPI.onToggleAssistant(() => {
   }
 });
 
+// 监听空格键：不再用于语音控制
+document.addEventListener('keydown', (e) => {
+  // 移除空格键监听
+});
+
 // 页面加载完成后的初始化
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DeepOcean UI initialized');

@@ -1,0 +1,15 @@
+"""
+Python 服务依赖包列表
+
+使用 UV 管理依赖
+"""
+
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+dashscope==1.14.0
+pydantic==2.5.0
+python-dotenv==1.0.0
+httpx==0.26.0
+python-multipart==0.0.20
+pydub==0.25.1
+python-multipart==0.0.6

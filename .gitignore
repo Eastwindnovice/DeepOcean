@@ -1,0 +1,69 @@
+# IDE 配置
+.kiro
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+uv.lock
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# 环境变量（敏感信息）
+.env
+.env.local
+.env.*.local
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件和测试文件
+temp/
+tmp/
+*.tmp
+test_*.py
+test_*.html
+test-*.html
+diagnose_*.py
+debug_*.raw
+debug_*.wav
+debug_*.pcm
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 构建产物
+*.exe
+*.app
+*.dmg
+*.deb
+*.rpm
+
+# 文档（根据项目规则，不自动生成）
+AUDIO_FIX_SUMMARY.txt

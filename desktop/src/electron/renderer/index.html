@@ -27,6 +27,19 @@
     <div class="state-display">
       <div class="state-text" id="state-text">正在聆听...</div>
       <div class="transcription" id="transcription"></div>
+      
+      <!-- 文本输入框（临时测试用） -->
+      <div class="text-input-container" id="text-input-container">
+        <input 
+          type="text" 
+          id="text-input" 
+          class="text-input" 
+          placeholder="输入命令（例如：打开Chrome）"
+          autocomplete="off"
+        />
+        <button class="send-btn" id="send-btn">发送</button>
+      </div>
+      
       <div class="loading-spinner hidden" id="loading-spinner">
         <div class="spinner"></div>
       </div>
@@ -41,6 +54,7 @@
 
   <script src="scripts/ui/border-glow.js"></script>
   <script src="scripts/ui/center-animation.js"></script>
+  <script src="scripts/voice-recognizer.js"></script>
   <script src="scripts/ui/overlay-panel.js"></script>
   <script src="scripts/animation-engine.js"></script>
   <script src="scripts/main.js"></script>
