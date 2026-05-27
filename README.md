@@ -2,6 +2,7 @@
 DeepOcean uses a cloud-based Qwen API Key. By telling DeepOcean your intent, it can drive and operate your computer to complete certain tasks.
 
 ## Table of Contents
+<<<<<<< HEAD
 - [DeepOcean](#deepocean)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
@@ -10,6 +11,12 @@ DeepOcean uses a cloud-based Qwen API Key. By telling DeepOcean your intent, it 
   - [Quick Start](#quick-start)
   - [Contributing](#contributing)
   - [License](#license)
+=======
+- [Features](#features)
+- [Demo](#demo)
+- [Requirements](#requirements)
+- [Quick Start](#quick start)
+>>>>>>> 8b1201c49497e9fbe593b558006b6b0db865bab6
 
 ## Features
 - ✅ Feature 1:
