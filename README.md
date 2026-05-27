@@ -1,4 +1,19 @@
 # DeepOcean
+<p align="center">
+  <img width="313.5" height="313.5" alt="ChatGPT Image May 27, 2026, 06_27_53 PM" src="https://github.com/user-attachments/assets/1932df5c-a547-47c5-802b-dcc1ec1d8de8" />
+</p>
+
+<p align="center">
+  <a href="./LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" />
+  </a>
+  <img alt="Node Version" src="https://img.shields.io/badge/node-%3E%3D18-brightgreen" />
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.8%2B-blue" />
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Eastwindnovice/DeepOcean" />
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/Eastwindnovice/DeepOcean" />
+</p>
+
+
 DeepOcean uses a cloud-based Qwen API Key. By telling DeepOcean your intent, it can drive and operate your computer to complete certain tasks.
 
 ## Table of Contents
@@ -71,7 +86,7 @@ npm run dev
 ```
 
 5. Use the project to perform operations
-After both the frontend and backend have started, you can quickly summon the AI assistant using the `Ctrl + Alt + I` shortcut. Then enter the command you want to execute and confirm it.
+After both the frontend and backend have started, you can quickly summon the AI assistant using the `Ctrl + Alt + I` shortcut. Then enter the command you want to execute and confirm it.If you want to exit the current agent application process, you can simply press the ESC key to exit the current project application.
 
 
 ## Contributing
