@@ -76,3 +76,4 @@ Contributions are welcome!
 - If you would like to contribute, please submit a PR.
 
 ## License
+This project is licensed under the [MIT License](./LICENSE).
