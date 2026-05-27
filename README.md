@@ -15,21 +15,25 @@ DeepOcean uses a cloud-based Qwen API Key. By telling DeepOcean your intent, it 
 Enter your intent in the input box, then confirm it to execute. The system will call the cloud API key to drive computer operations.
 
 - 🚧 Planned: Feature 2:
-In the future, it should be able to convert speech to text in real time and display it in the central black subtitle box. After the user confirms the intended action, it can begin operating the computer.
+In the future, it should be able to convert speech to text in real time and display it in the central black subtitle box. After the user confirms the intended action, it can begin operating the co[...]
 
 ## Demo
 Quickly summon the PC AI assistant using the shortcut Ctrl + Alt + I, then enter a command in the input box.
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/fd5f3427-68e3-47d6-a4c1-0168e9111cc5" />
+<p align="center">
+  <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/fd5f3427-68e3-47d6-a4c1-0168e9111cc5" />
+</p>
 
 When you click the middle box to confirm execution, the agent will automatically open the Chrome browser and search for Python.
-<img width="1127" height="832" alt="image" src="https://github.com/user-attachments/assets/8defff28-5284-4e6b-a8b7-aec90a40cf0a" />
+<p align="center">
+  <img width="1127" height="832" alt="image" src="https://github.com/user-attachments/assets/8defff28-5284-4e6b-a8b7-aec90a40cf0a" />
+</p>
 
 ## Requirements
 - OS: Windows 10/11
 - Node.js 18+
 - Python >= 3.8
 - uv、npm
-- The backend requires a Qwen DashScope API key (example in agent-svc/.env.example). You need to configure the Qwen API Key website link: [https://bailian.console.aliyun.com/](https://bailian.console.aliyun.com/)
+- The backend requires a Qwen DashScope API key (example in agent-svc/.env.example). You need to configure the Qwen API Key website link: [https://bailian.console.aliyun.com/](https://bailian.cons[...]
 
 ## Quick Start
 1. Clone the repositor
